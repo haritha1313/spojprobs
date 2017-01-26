@@ -16,7 +16,6 @@ int bfs(int s, bool visited[], char color[], vector <int> bugs[],int h)
 		q.pop();
 		for(int m=0;m<bugs[p].size();m++)
 		{
-			//cout<<color[p]<<" "<<color[bugs[p][m]]<<" ";
 			if(color[p]==color[bugs[p][m]])
 			return 2;
 			if(visited[bugs[p][m]]==false)
@@ -53,17 +52,10 @@ int main() {
 		for(int j=0;j<inter;j++)
 		{
 			cin>>a>>b;
-			//cout<<a<<" "<<b<<"\n";
 			bugs[a].push_back(b);
 			bugs[b].push_back(a);
 		}
-		// for(int j=1;j<=no;j++)
-		// {
-		// 	for(int k=0;k<bugs[j].size();++k)
-		// 	cout<<bugs[j][k]<<" ";
-		// 	cout<<"\n";
-			
-		// }
+		
 		int flag=0;
 		for(int j=1;j<=no;j++)
 		{
