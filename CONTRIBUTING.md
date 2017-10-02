@@ -3,6 +3,7 @@ Contributing to this repo
 Contribute solutions to classical spoj problems in any language.
 **Make sure that the file name is of format <spoj-problem-abbreviation>.<language-extension>
 **Please do not upload solutions to tutorial problems
+**Feel free to add solutions in other languages
 
 How To:
 
