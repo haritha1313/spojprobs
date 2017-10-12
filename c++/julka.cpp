@@ -1,0 +1,91 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(void)
+{
+	int t=10;
+	while(t--)
+	{
+		int i,j,n,a[101]={0},b[101]={0},c[101]={0},d[101]={0},q,l1,l2;
+		string x,y;
+		cin>>x>>y;
+		l1=x.length();
+		l2=y.length();
+		for(i=0;i<l1;i++)
+			a[i]=x[i]-'0';
+		for(i=0;i<l2;i++)
+			b[l1-l2+i]=y[i]-'0';
+		for(i=l1-1;i>=0;i--)
+		{
+			if(a[i]>=b[i])
+				c[i]=a[i]-b[i];
+			else
+			{
+				a[i]+=10;
+				c[i]=a[i]-b[i];
+				j=i;
+				while(a[j-1]==0)
+				{
+					a[j-1]=9;
+					j--;
+				}
+				a[j-1]--;
+			}
+		}
+        for(i=0;i<l1;i++)
+        {
+        	d[i]=c[i]/2;
+        	q=c[i]%2;
+        	c[i+1]+=10*q;
+        }
+        for(i=0;i<l1;i++)
+            c[i]=d[i];
+        for(i=l1-1;i>=0;i--)
+        {
+        	q=d[i]+b[i];
+        	if(q<=9)
+        	{
+        		a[i]=q;
+        	}
+        	else
+        	{
+        		a[i]=q%10;
+        		j=i;
+        		while(d[j-1]==9)
+        		{
+        			d[j-1]++;
+        			d[j-1]%=10;
+        			j--;
+        		}
+        		d[j-1]++;
+        	}
+        }j=0;
+        for(i=0;i<l1;i++)
+        {
+            if(j==0&&a[i]==0)
+            {
+                cout<<"";
+            }
+            else
+            {
+                cout<<a[i];
+                j=1;
+            }
+        }j=0;
+        cout<<endl;
+        for(i=0;i<l1;i++)
+        {
+            if(j==0&&c[i]==0)
+            {
+                cout<<"";
+            }
+            else
+            {
+                cout<<c[i];
+                j=1;
+            }
+        }
+        cout<<endl;
+
+	}
+}
+
