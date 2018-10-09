@@ -1,4 +1,4 @@
-Contributing to this repo
+#Contributing to this repo
 
 Contribute solutions to classical spoj problems in any language.
 **Make sure that the file name is of format <spoj-problem-abbreviation>.<language-extension>
