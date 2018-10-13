@@ -8,7 +8,7 @@ Contribute solutions to classical spoj problems in any language.<br>
 
 How To:
 
-    git clone https://github.com/source-aasf/spojprobs.git
+    git clone https://github.com/haritha1313/spojprobs.git
     git checkout -b <Branch-Name>
     Add your codes/solutions in the format <spoj-problem-abbreviation>.<lang-extension>
     add all your files using git add
