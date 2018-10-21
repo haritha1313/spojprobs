@@ -1,0 +1,6 @@
+import math
+t=int(input())
+for i in range(0,t):
+	inpt=int(input())
+	print(str(math.factorial(inpt))+'\n')
+	i=i-1
