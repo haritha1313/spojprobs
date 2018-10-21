@@ -1,0 +1,10 @@
+t=int(input())
+for i in range(0,t):
+	n=int(input())
+	cnt=0
+	while n>0:
+		cnt=cnt+int(n/5)
+		n=int(n/5)
+	print(str(cnt)+'\n')
+	cnt=0
+	i=i-1
