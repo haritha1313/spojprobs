@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-	int a, b, c, m; //Initializing Variables
+	int a, b, c; //Initializing Variables
 	scanf("%d %d %d", &a, &b, &c); //Scanning Integers on console
 	
 	while(1) //Running Infinity Loop
