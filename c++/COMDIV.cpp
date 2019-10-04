@@ -1,45 +1,49 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-long long int mod(long long int a,long long int b,long long int m)
-{
-     long long int x=1;
-
-     while(b>0)
-     {
-         if(b%2==1)
-         {
-             x=(x*a)%m;
-         }
-
-         a=(a*a)%m;
-         b=b/2;
-     }
-
-     return x%m;
-
-}
-
-
 int main()
 {
-   long long int n,k,a;
-   cin>>n>>k>>a;
+    long long int t;
+    cin>>t;
+   // scanf("%lld",&t);
    
-   vector<long long int> v;
-   for(int i=0; i<n; i++)
-   {
-      if(mod(i,k,n)==a)
+   ios_base::sync_with_stdio(false);
+     cin.tie(NULL);
+     cout.tie(NULL);
+    while(t--)
+    {
+    long long int n1,n2;
+    cin>>n1>>n2;
+   // scanf( "%lld",&n1);
+   // scanf( "%lld",&n2);
+      
+     cin.tie(NULL);
+     cout.tie(NULL);
+      
+      int n=__gcd(n1,n2);
+
+    int c1=0;
+      for(int i=1; i<=sqrt(n); i++)
       {
-         v.push_back(i);
+          if(n%i==0)
+          {
+              int n1=n/i;
+              int n2=n/n1;
+              if(n1!=n2)
+               c1=c1+2;
+               else
+               {
+                   c1++;
+               }
+               
+              
+          }
       }
 
-   }
+     cout<<c1<<"\n";
+     // printf("%lld\n",c1);
 
-   cout<<v.size()<<endl;
-   for(int i=0; i<v.size(); i++)
-   cout<<v[i]<<endl;
+      
+    }
 
-  // cout<<endl;
-   
 }
