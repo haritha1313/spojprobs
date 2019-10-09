@@ -1,0 +1,30 @@
+#import math
+#import os
+#import random
+#import re
+from sys import stdin, stdout
+#from collections import Counter,deque,OrderedDict
+#from itertools import permutations
+#import numpy as np
+
+def si():
+	return str(stdin.readline())
+def ii():
+    return int(input())
+def mi():
+    return map(int, stdin.readline().split())
+def li():
+    return [int(i) for i in input().split()]
+def debug(x):
+	return stdout.write(str(x))
+
+
+def main(): 
+	n=ii()
+	for i in range(n):
+		a,b=mi()
+		print(pow(a,b,10))
+		
+
+main()
+	
